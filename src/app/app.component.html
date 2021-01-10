@@ -1,86 +1,89 @@
-<mat-card>
-  <mat-card-content>
-    <mat-grid-list cols="2" gutterSize="30px" rowHeight="4:1">
-      <mat-grid-tile>
-        <mat-form-field appearance="fill">
-          <mat-label>Name</mat-label>
-          <input matInput (input)="onNameChange($event.target.value)" />
-        </mat-form-field>
-      </mat-grid-tile>
-      <mat-grid-tile class="etichetta">
-        <mat-label> Nome {{ name | titlecase }}</mat-label>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-form-field>
-          <mat-label> </mat-label>
-          <mat-form-field appearance="fill">
+<div class="centered">
+  <mat-card>
+    <mat-card-content>
+      <mat-grid-list cols="2" gutterSize="10px" rowHeight="5:1">
+        <mat-grid-tile>
+          <mat-form-field appearance="fill" class="left-align-forced">
+            <mat-label>Name</mat-label>
+            <input matInput (input)="onNameChange($event.target.value)" />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-label class="left-align-forced">
+            Nome {{ name | titlecase }}</mat-label
+          >
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field appearance="fill" class="left-align-forced">
             <mat-label>Input & change events</mat-label>
-            <input matInput [matDatepicker]="picker"
-                   (dateInput)="onDateChange($event.target.value)"
-                   (dateChange)="onDateChange($event.target.value)">
+            <input
+              matInput
+              [matDatepicker]="picker"
+              (dateInput)="onDateChange($event.target.value)"
+              (dateChange)="onDateChange($event.target.value)"
+            />
             <mat-datepicker-toggle
-              matSuffix [for]="picker"
+              matSuffix
+              [for]="picker"
             ></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
-          <!-- <input
-            matInput
-            type="date"
-            class="form-control"
-            (input)="onDateChange($event.target.value)"
-          /> -->
-        </mat-form-field>
-      </mat-grid-tile>
-      <mat-grid-tile class="etichetta">
-        <div class="etichetta">Data Pagamento {{ date | date : 'dd/MM/yyyy'  }}</div>
-        <!-- <mat-label class="etichetta"  >  <b>Payment Date {{ date | date: 'MMMM d, y' }}</b></mat-label> -->
-      </mat-grid-tile>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-label class="left-align-forced"
+            >Data Pagamento {{ date | date: "dd/MM/yyyy" }}</mat-label
+          >
+        </mat-grid-tile>
 
-      <mat-grid-tile>
-        <mat-form-field>
-          <mat-label>Totale pagamento</mat-label>
-          <input
-            matInput
-            class="form-control"
-            (input)="onAmountChange($event.target.value)"
-          />
-        </mat-form-field>
-      </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field class="left-align-forced">
+            <mat-label>Totale pagamento</mat-label>
+            <input
+              matInput
+              class="form-control"
+              (input)="onAmountChange($event.target.value)"
+            />
+          </mat-form-field>
+        </mat-grid-tile>
 
-      <mat-grid-tile>
-        <mat-label>
-          <b>Totale pagamento</b> {{ amount | currency :'EUR':true }}</mat-label
-        >
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-form-field>
-          <mat-label> Altezza</mat-label>
-          <input
-            matInput
-            class="form-control"
-            (input)="onHeightChange($event.target.value)"
-          />
-        </mat-form-field>
-      </mat-grid-tile>
-    <mat-grid-tile>
-        <mat-label>Altezza {{ height | number: "1.1-3" }} </mat-label>
-      </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-label class="left-align-forced">
+            <b>Totale pagamento</b>
+            {{ amount | currency: "EUR":true }}</mat-label
+          >
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field class="left-align-forced">
+            <mat-label> Altezza</mat-label>
+            <input
+              matInput
+              class="form-control"
+              (input)="onHeightChange($event.target.value)"
+            />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-label class="left-align-forced"
+            >Altezza {{ height | number: "1.1-3" }}
+          </mat-label>
+        </mat-grid-tile>
 
-      <mat-grid-tile>
-        <mat-form-field>
-          <mat-label> Miles</mat-label>
-          <input
-            matInput
-            class="form-control"
-            (input)="onMilesChange($event.target.value)"
-          />
-        </mat-form-field>
-      </mat-grid-tile>
-      <mat-grid-tile>
-        <mat-label
-          >Kilometers {{ miles | convert: "km" | number: "1.0-2" }}</mat-label
-        >
-      </mat-grid-tile>
-    </mat-grid-list>
-  </mat-card-content>
-</mat-card>
+        <mat-grid-tile>
+          <mat-form-field class="left-align-forced">
+            <mat-label> Miles</mat-label>
+            <input
+              matInput
+              class="form-control"
+              (input)="onMilesChange($event.target.value)"
+            />
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-label class="left-align-forced"
+            >Kilometers {{ miles | convert: "km" | number: "1.0-2" }}</mat-label
+          >
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</div>

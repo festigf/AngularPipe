@@ -1,10 +1,37 @@
 .mat-card{
   width:600px;
-
+  height: 400px;
+  /* align-content: center;
+  height: 100%;
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
 
 }
+.centered{
+  /* align-content: center; */
 
-.etichetta{
-  justify-content: start !important;
-align-self: start;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+/* :host{
+  align-content: center;
+} */
+/* :host >>> .mat-figure{
+  align-items: start !important;
+  width:100%;
+} */
+/* .mat-grid-list .mat-grid-tile .mat-figure {
+  justify-content: flex-start !important ;
+  align-items: flex-start !important;
+  width:100%;
+} */
+
+.left-align-forced {
+  width:100%;
+  text-align: left;
+
+
+
 }
