@@ -9,6 +9,9 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "it"
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -67,6 +70,9 @@
           "configurations": {
             "production": {
               "browserTarget": "pipes:build:production"
+            },
+            "it": {
+              "browserTarget": "pipes:build:it"
             }
           }
         },
